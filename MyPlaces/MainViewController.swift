@@ -22,7 +22,6 @@ class MainViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return restarauntNames.count
     }
@@ -33,7 +32,15 @@ class MainViewController: UITableViewController {
 
         cell.textLabel?.text = restarauntNames[indexPath.row]
         cell.imageView?.image = UIImage(named: restarauntNames[indexPath.row])
+        cell.imageView?.layer.cornerRadius = cell.frame.size.height / 2
+        cell.imageView?.clipsToBounds = true
         return cell
+    }
+    
+    // MARK: - TableView Delegate
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 85
     }
     
     /*
