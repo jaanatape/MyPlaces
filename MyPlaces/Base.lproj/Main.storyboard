@@ -11,18 +11,73 @@
         <scene sceneID="MSb-NT-nK5">
             <objects>
                 <tableViewController id="Azd-F3-dHB" customClass="MainViewController" customModule="MyPlaces" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="FCY-nB-cJH">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="85" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="FCY-nB-cJH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="yPJ-Qt-2lj">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="yPJ-Qt-2lj" customClass="CustomTableViewCell" customModule="MyPlaces" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="85"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yPJ-Qt-2lj" id="NQr-yA-hkg">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="85"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="izS-AG-RUq">
+                                            <rect key="frame" x="15" y="10" width="65" height="65"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="65" id="5Xx-rv-cMk"/>
+                                                <constraint firstAttribute="height" constant="65" id="UUS-rx-3Fn"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lmy-kZ-xrS">
+                                            <rect key="frame" x="95" y="9" width="48" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="RBm-PA-70F"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="18"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Nf-el-pqk">
+                                            <rect key="frame" x="95" y="35" width="315" height="18"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="18" id="ioJ-J4-22L"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Apz-VJ-mrd">
+                                            <rect key="frame" x="95" y="54" width="26.5" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="wwM-Na-8YE"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="13"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="7Nf-el-pqk" firstAttribute="trailing" secondItem="NQr-yA-hkg" secondAttribute="trailingMargin" constant="16" id="Azr-99-CVb"/>
+                                        <constraint firstItem="Apz-VJ-mrd" firstAttribute="top" secondItem="7Nf-el-pqk" secondAttribute="bottom" constant="1" id="I9w-Uj-Wm2"/>
+                                        <constraint firstItem="izS-AG-RUq" firstAttribute="leading" secondItem="NQr-yA-hkg" secondAttribute="leading" constant="15" id="KHo-Pz-cdo"/>
+                                        <constraint firstItem="izS-AG-RUq" firstAttribute="centerY" secondItem="NQr-yA-hkg" secondAttribute="centerY" id="Ns5-l3-Vcn"/>
+                                        <constraint firstItem="Lmy-kZ-xrS" firstAttribute="top" secondItem="NQr-yA-hkg" secondAttribute="top" constant="9" id="VFO-zQ-PPG"/>
+                                        <constraint firstItem="Apz-VJ-mrd" firstAttribute="leading" secondItem="izS-AG-RUq" secondAttribute="trailing" constant="15" id="ahg-Jf-8Sm"/>
+                                        <constraint firstItem="Lmy-kZ-xrS" firstAttribute="leading" secondItem="izS-AG-RUq" secondAttribute="trailing" constant="15" id="alb-ge-YaJ"/>
+                                        <constraint firstItem="izS-AG-RUq" firstAttribute="top" secondItem="NQr-yA-hkg" secondAttribute="top" constant="10" id="c6S-yd-nTV"/>
+                                        <constraint firstItem="7Nf-el-pqk" firstAttribute="top" secondItem="Lmy-kZ-xrS" secondAttribute="bottom" constant="5" id="ifq-Uz-Uoq"/>
+                                        <constraint firstAttribute="bottom" secondItem="Apz-VJ-mrd" secondAttribute="bottom" constant="10" id="koL-Pd-aCg"/>
+                                        <constraint firstItem="7Nf-el-pqk" firstAttribute="leading" secondItem="izS-AG-RUq" secondAttribute="trailing" constant="15" id="rDy-y3-wV7"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="imageOfPlace" destination="izS-AG-RUq" id="O8l-3q-bRX"/>
+                                    <outlet property="locationLabel" destination="7Nf-el-pqk" id="sXJ-4O-3UL"/>
+                                    <outlet property="nameLabel" destination="Lmy-kZ-xrS" id="IZ2-Tz-HwT"/>
+                                    <outlet property="typeLabel" destination="Apz-VJ-mrd" id="bah-cP-5PU"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -34,7 +89,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e3s-bc-pAf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="912" y="181"/>
+            <point key="canvasLocation" x="911.59420289855075" y="180.80357142857142"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Bgq-sw-z7z">
