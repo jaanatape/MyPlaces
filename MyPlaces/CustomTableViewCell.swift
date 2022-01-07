@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class CustomTableViewCell: UITableViewCell {
 
     @IBOutlet weak var imageOfPlace: UIImageView!
@@ -14,5 +15,5 @@ class CustomTableViewCell: UITableViewCell {
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var typeLabel: UILabel!
     
-    
+
 }

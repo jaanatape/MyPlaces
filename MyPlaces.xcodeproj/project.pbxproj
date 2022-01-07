@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E42033627885DB6008F1E2B /* NewPlaceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E42033527885DB6008F1E2B /* NewPlaceTableViewController.swift */; };
 		7EFEC1F327790D50002D0490 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFEC1F227790D50002D0490 /* AppDelegate.swift */; };
 		7EFEC1F527790D50002D0490 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFEC1F427790D50002D0490 /* SceneDelegate.swift */; };
 		7EFEC1FA27790D50002D0490 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EFEC1F827790D50002D0490 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7E42033527885DB6008F1E2B /* NewPlaceTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlaceTableViewController.swift; sourceTree = "<group>"; };
 		7EFEC1EF27790D50002D0490 /* MyPlaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPlaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EFEC1F227790D50002D0490 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7EFEC1F427790D50002D0490 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 			children = (
 				7EFEC1F227790D50002D0490 /* AppDelegate.swift */,
 				7EFEC206277CEDEC002D0490 /* MainViewController.swift */,
+				7E42033527885DB6008F1E2B /* NewPlaceTableViewController.swift */,
 				7EFEC20A27878C6E002D0490 /* PlaceModel.swift */,
 				7EFEC208278777D3002D0490 /* CustomTableViewCell.swift */,
 				7EFEC1F427790D50002D0490 /* SceneDelegate.swift */,
@@ -144,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E42033627885DB6008F1E2B /* NewPlaceTableViewController.swift in Sources */,
 				7EFEC207277CEDEC002D0490 /* MainViewController.swift in Sources */,
 				7EFEC1F327790D50002D0490 /* AppDelegate.swift in Sources */,
 				7EFEC20B27878C6E002D0490 /* PlaceModel.swift in Sources */,
